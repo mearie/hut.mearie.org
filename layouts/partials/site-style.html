@@ -1,0 +1,8 @@
+{{- with resources.Get "styles.scss" | toCSS | minify -}}
+<style>{{ .Content | safeCSS }}</style>
+{{- end -}}
+{{- if .Site.BuildDrafts -}}
+{{- with resources.Get "draft.scss" | toCSS | minify -}}
+<style>{{ .Content | safeCSS }}</style>
+{{- end -}}
+{{- end -}}

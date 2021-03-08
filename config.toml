@@ -1,0 +1,13 @@
+baseURL = "https://hut.mearie.org/"
+languageCode = "ko"
+title = "허튼소리"
+
+[taxonomies]
+category = "categories"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+style = "friendly"
+

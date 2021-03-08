@@ -1,0 +1,15 @@
+<footer>
+<svg class="logo" version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 182 186">
+<path d="M0 0h54v102h-35v52h35v32h-54m34-70h20v24h-20" />
+<path d="M64 0h54v100a22 22 0 0 0 0 56v30h-54m54-72a12 12 0 0 0 0 28v-28" />
+<path d="M128 0h54v102h-33v12h33v8h-33v32h33v32h-54m35-52h19v8h-19" />
+</svg>
+&copy; 2021 강 성훈.
+<strong><a href="/">허튼소리</a></strong>는 <a href="https://mearie.org/">메아리</a>의 일부입니다.<br>
+{{ $url := trim .RelPermalink "/" | default "index" -}}
+{{ $mail := printf "hut+%s" (replace $url "/" ".") -}}
+{{ $subject := printf "[%s] 의견" $url -}}
+{{ $body := printf "저는 '%s' 글을 처음부터 끝까지 잘 읽었고 로봇이 아니며 올바른 도메인을 채우고 이 줄을 지울만한 최소한의 지능이 있음을 확인합니다." (.Title | default "허튼소리") -}}
+이 페이지에 대한 의견은 <a href="mailto:?to={{ $mail }}@.org&amp;subject={{ $subject }}&amp;body={{ $body }}"><code>{{ $mail }}@</code></a>에 보내 주세요.
+</footer>
+

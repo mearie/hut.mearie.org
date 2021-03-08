@@ -1,0 +1,11 @@
+$draft-color: #e81;
+
+html.draft {
+	border-top: 1rem solid $draft-color;
+	body {
+		min-height: calc(100vh - 1rem);
+	}
+}
+a.draft {
+	color: $draft-color;
+}

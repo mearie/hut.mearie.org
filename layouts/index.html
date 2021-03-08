@@ -1,0 +1,27 @@
+{{ define "header" }}{{ end -}}
+
+{{- define "main" -}}
+{{- partial "article.html" . -}}
+
+{{ with .Pages -}}
+<nav>
+{{ range .GroupByParam "categories" -}}
+{{ with $.Site.GetPage "categories" .Key -}}<h2>{{ .Title }}</h2>{{ end -}}
+<ul class="keywords">
+{{- range .Pages -}}
+<li><a class="keyword{{ if .Draft }} draft{{ end }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+{{- with .Pages -}}
+<ul>
+{{- range . -}}
+<li><a class="keyword{{ if .Draft }} draft{{ end }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+{{- end -}}
+</ul>
+{{- end -}}
+</li>
+{{- end -}}
+</ul>
+{{- end -}}
+</nav>
+{{ end -}}
+
+{{ end }}

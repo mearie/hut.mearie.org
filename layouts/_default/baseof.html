@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default "en" }}"{{ if .Draft }} class="draft"{{ end }}>
+<head>
+<meta charset="utf-8">
+<title>{{ block "title" . }}{{ with $.Params.Title }}{{ . }} | {{ end }}{{ $.Site.Title }}{{ end }}</title>
+<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+<meta name="description" content="{{ with $.Description }}{{ . }}{{ else }}{{ if $.IsPage }}{{ .Summary }}{{ else }}{{ with $.Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+{{- hugo.Generator -}}
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+
+{{- if false -}}
+{{- with .OutputFormats.Get "RSS" -}}
+<link href="{{ $.RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+<link href="{{ $.RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+{{- end -}}
+{{- end -}}
+
+{{- partial "site-style.html" . -}}
+{{- if $.Params.math -}}
+{{- partial "site-katex.html" . -}}
+{{- end -}}
+
+{{- block "head" . }}{{ end -}}
+</head>
+
+<body>
+{{ block "header" . -}}{{ partial "site-header.html" . }}{{- end -}}
+<main role="main">
+{{ block "main" . -}}{{- end -}}
+</main>
+{{ block "footer" . -}}{{ partial "site-footer.html" . }}{{- end -}}
+</body>
+
+</html>

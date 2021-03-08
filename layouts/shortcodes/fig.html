@@ -1,0 +1,10 @@
+<figure
+{{- if .Get 0 }} class="{{- .Get 0 -}}
+{{- with .Get 1 }} {{ . }}{{ end -}}
+{{- with .Get 2 }} {{ . }}{{ end -}}
+{{- with .Get 3 }} {{ . }}{{ end -}}
+{{- with .Get 4 }} {{ . }}{{ end -}}
+"{{ end -}}
+>
+{{ .Inner }}
+</figure>

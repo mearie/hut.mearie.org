@@ -1,0 +1,27 @@
+{{- define "breadcrumb" -}}
+{{- if .Parent -}}
+{{- template "breadcrumb" .Parent -}}
+{{- end -}}
+{{- if .Title }}<a class="keyword" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a> » {{ end -}}
+{{- end -}}
+
+<article>
+
+{{- if or .Title .Params.changes -}}
+<header>
+
+{{- with .Parent }}<hgroup><h2>{{ template "breadcrumb" . }}</h2>{{ end -}}
+{{- with .Title -}}<h1>{{ . }}</h1>{{ end -}}
+{{- if .Parent }}</hgroup>{{ end -}}
+
+{{- with .Params.changes -}}
+{{- partial "changes.html" . -}}
+{{- end -}}
+
+</header>
+{{- end -}}
+
+{{- .Content -}}
+
+</article>
+

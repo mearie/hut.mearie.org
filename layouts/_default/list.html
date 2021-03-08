@@ -1,0 +1,15 @@
+{{ define "header" }}{{ end -}}
+
+{{- define "main" -}}
+{{- partial "article.html" . -}}
+
+<h2>하위 문서</h2>
+<nav>
+<ul class="keywords">
+{{ range .Pages -}}
+<li><a class="keyword{{ if .Draft }} draft{{ end }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+{{ end -}}
+</ul>
+</nav>
+
+{{ end }}

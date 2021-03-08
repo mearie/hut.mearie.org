@@ -1,0 +1,9 @@
+{{- if .Parent -}}
+{{- if eq .Parent.Name "fig" -}}
+<figcaption>{{ .Inner }}</figcaption>
+{{- else -}}
+{{- .Inner -}}
+{{- end -}}
+{{- else -}}
+{{- .Inner -}}
+{{- end -}}

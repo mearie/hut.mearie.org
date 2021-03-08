@@ -1,0 +1,16 @@
+{{ $ := . -}}
+{{ $path := .Get 0 -}}
+{{ $title := .Get 1 -}}
+{{ with $.Site.GetPage (printf "/%s.md" ($path | lower)) -}}
+<a class="keyword{{ if .Draft }} draft{{ end }}" href="{{ .Permalink }}">{{ if $title }}{{ template "remainder" $ }}{{ else }}{{ .Title }}{{ end }}</a>
+{{- else -}}
+<a class="dead">{{ if $title }}{{ template "remainder" $ }}{{ else }}{{ $path }}{{ end }}</a>
+{{- end -}}
+
+{{- define "remainder" -}}
+{{- .Get 1 -}}
+{{- with .Get 2 }} {{ . }}{{ end -}}
+{{- with .Get 3 }} {{ . }}{{ end -}}
+{{- with .Get 4 }} {{ . }}{{ end -}}
+{{- with .Get 5 }} {{ . }}{{ end -}}
+{{- end -}}

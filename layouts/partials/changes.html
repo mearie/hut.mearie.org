@@ -1,0 +1,23 @@
+{{ $len := len . }}
+{{- if gt $len 0 -}}
+<details class="changes">
+<summary>
+{{- with index . 0 }}<strong><time>{{ index . 0 }}</time></strong> 작성{{ end -}}
+{{- if gt $len 1 }}{{ with index . (sub $len 1) -}}, <strong><time>{{ index . 0 }}</time></strong> 마지막 큰 수정{{ end }}{{ end -}}
+</summary>
+{{- range . -}}
+<p>
+{{- range $i, $part := . -}}
+{{- if eq $i 0 -}}
+<strong><time>{{ $part }}</time></strong>
+{{- else if modBool $i 2 -}}
+<time>{{ $part }}</time>
+{{- else -}}
+에 {{ $part | markdownify }}
+{{ end -}}
+{{- end -}}
+</p>
+{{- end -}}
+</details>
+{{- end -}}
+
