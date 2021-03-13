@@ -16,18 +16,36 @@ html {
 	font-weight: 200;
 	font-size: $rem;
 }
-:lang(en) {
+:lang(en), [lang$=-fonipa] {
 	font-family: 'Noto Serif', serif;
 }
 body {
 	width: 50rem;
 	margin: 0 auto;
 	padding: 1rem 0 0 0;
+	line-height: 1.8;
 	@media screen and (max-width: #{52 * $rem}) {
 		width: auto;
 		margin: 0 1rem;
 		overflow-x: hidden;
 	}
+}
+
+// https://stackoverflow.com/a/28060065
+* {
+	vertical-align: bottom;
+}
+.katex, .katex * {
+	vertical-align: baseline;
+}
+// https://stackoverflow.com/a/6594576
+sup {
+	vertical-align: super;
+	line-height: 0;
+}
+sub {
+	vertical-align: sub;
+	line-height: 0;
 }
 
 p {
@@ -151,6 +169,36 @@ pre {
 small {
 	font-size: 0.8em;
 	color: $main-color;
+
+	&.claim {
+		font-size: 1em;
+		background-color: $main-color;
+		color: white;
+		padding: 0 0 0 0.2em;
+		margin: 0 0.4em 0 0;
+		font-weight: bold;
+		position: relative;
+
+		& > span {
+			display: none;
+		}
+
+		&:after, &:before {
+			content: "";
+			position: absolute;
+			left: 100%;
+			width: 0.4em;
+			height: 50%;
+		}
+		&:before {
+			top: 0px;
+			background: linear-gradient(to top right, #{$main-color} 50%, transparent 51%);
+		}
+		&:after {
+			bottom: 0px;
+			background: linear-gradient(to bottom right, #{$main-color} 50%, transparent 51%);
+		}
+	}
 }
 
 a {

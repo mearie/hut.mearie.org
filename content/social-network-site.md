@@ -15,6 +15,7 @@ The same argument works with Twitter, and I genuinely believed so a decade ago (
 All social networks do not work, federated or not. I'm going back to the good ol' IRC or whatever it follows.
 {{</hn>}}
 
+{{<claim>}}
 거의 모든 SNS는 사이트를 키우기 위해 굳이 필요하지 않은 새로운 인간 관계를 유도한다.
 내가 작성한 게시물이 내 인간 관계 바깥으로 맥락 없이 전파되는 것도,
 소셜 미디어 상의 영향력이 절대적인 가치로 숭상되는 것도,

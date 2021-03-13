@@ -5,14 +5,17 @@ categories: computing
 changes:
 - - 2021-03-01
   - 해커뉴스에 올렸던 글을 바탕으로 초벌 작성.
-  - 2021-03-08
+- - 2021-03-08
   - 미작성이었던 [표준이 왜 이따위인가?](#bad-spec)와 [대안](#alternatives) 섹션을 마저 작성.
+  - 2021-03-09
+  - “소숫점이 없는 정수에 범위 제한이 있는가?” 항목이 왜 문제가 되는지 구체적으로 부연.
 ---
 
 [JSON](https://en.wikipedia.org/wiki/JSON)은 자바스크립트의 (거의) 부분집합으로 시작해서 현재는 언어 불문하고 아주 널리 쓰이는 {{<a serialization 직렬화>}} 포맷이다.
 사실상 모든 프로그래밍 언어에 JSON 라이브러리가 있다고 보아도 좋다.
 JSON보다 30년 정도 이전에 나온 [Apple II에서 돌아가는 JSON 라이브러리](https://github.com/ppelleti/json65)도 있을 정도이다.
 
+{{<claim>}}
 **JSON은 쓰레기다.**
 JSON은 대강 만들어진 표준이 얼마나 심각한 문제를 야기할 수 있는지 보여 주는 대표적인 예제이다.
 이걸 만든 사람은 [Douglas Crockford](https://en.wikipedia.org/wiki/Douglas_Crockford)라는 사람인데,
@@ -120,7 +123,8 @@ This is true, but due to its origin I think we have a weak agreement over the JS
 
 	- 소숫점이 없는 정수에 범위 제한이 있는가?
 	  일부 JSON 구현은 소숫점 여부로 정수 타입을 쓸지 실수 타입을 쓸지 결정하는데,
-	  정수 타입에 범위 제한이 있으면 실수로는 표현 가능해도 예상치 않은 오류가 발생할 수 있다.
+          일반적으로 이 정수 타입의 범위는 ±2<sup>31</sup>이나 ±2<sup>63</sup> 근방으로 실수 타입의 범위와 일치하지 않는다.
+          따라서 ±2<sup>31</sup>보다 큰 정수는 실수로 표현 가능하다 해도 일부 구현체에서 오작동할 수 있다.
 
 - {{<hn 26234476>}}
   Seriously, I believe the omission of Infinity and NaN from JSON is a huge mistake, if not Crockford's bad joke. It is commonly said that JSON was originally going to be `eval`ed and Infinity and NaN could have been redefined, but that eval had to be already preceded by filtering anyway so you can put a few lines to ensure that Infinity and NaN are expected values. Or use `Function` instead. Or use `1/0` or `0/0` as pseudo-literals. Not every JS value is present in the JSON data model, but it's absurd that not every JS number is present in it. 
@@ -206,6 +210,10 @@ RFC 7159는 Crockford의 RFC보다는 상태가 많이 낫지만 여전히 이�
   여전히 정규화에 대한 내용이 하나도 없다.
   그리하여 JSON 정규화는 여전히 필요한 사람마다 만들어 쓰는 실정이다.
   가장 최근의 표준화 시도로는 [RFC 8785](https://tools.ietf.org/html/rfc8785)가 있는데, 두고 볼 일이다.
+
+* 〈[JSON 파싱은 지뢰밭](http://seriot.ch/parsing_json.php)〉이라는 유명한 글이 있을 정도로 JSON 파서의 버그 빈도는 높은 편인데,
+  이 쯤 되었으면 공식 테스트 슈트가 따라 올 법도 하지만 그런 거 없다.
+  앞선 글을 쓴 저자가 만든 [테스트 슈트](https://github.com/nst/JSONTestSuite)가 있으니 필요하다면 그걸 쓰도록 하자.
 
 ## 대안 {#alternatives}
 
