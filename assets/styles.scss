@@ -11,10 +11,20 @@ $dead-link-color: lighten(#a53, 30);
 
 $rem: 18px;
 
+@mixin invert {
+	background-color: $main-color;
+	color: white;
+	--main-color: #{$link-color};
+	--light-color: white;
+}
+
 html {
 	font-family: 'Noto Serif KR', serif;
 	font-weight: 200;
 	font-size: $rem;
+
+	--main-color: #{$main-color};
+	--light-color: #{$light-color};
 }
 :lang(en), [lang$=-fonipa] {
 	font-family: 'Noto Serif', serif;
@@ -77,8 +87,14 @@ li {
 }
 ::marker {
 	font-size: 0.9rem;
-	color: $main-color;
+	color: var(--main-color);
 	font-weight: 700;
+}
+
+blockquote {
+	border-left: 0.3rem solid $main-color;
+	padding-left: 0.3rem;
+	margin-left: -0.6rem;
 }
 
 $figure-font-size: 0.8rem;
@@ -116,8 +132,7 @@ tr {
 thead {
 	position: sticky;
 	top: 0;
-	background-color: $main-color;
-	color: white;
+	@include invert;
 }
 tbody tr:nth-child(2n){
 	background-color: lighten($main-color, 50);
@@ -150,10 +165,10 @@ u {
 }
 s, del {
 	text-decoration: line-through;
-	color: $main-color;
+	color: var(--main-color);
 }
 code {
-	color: $main-color;
+	color: var(--main-color);
 }
 pre {
 	// override chroma's inline style
@@ -168,12 +183,11 @@ pre {
 }
 small {
 	font-size: 0.8em;
-	color: $main-color;
+	color: var(--main-color);
 
 	&.claim {
 		font-size: 1em;
-		background-color: $main-color;
-		color: white;
+		@include invert;
 		padding: 0 0 0 0.2em;
 		margin: 0 0.4em 0 0;
 		font-weight: bold;
@@ -289,8 +303,7 @@ figcaption {
 
 	pre+&, div.highlight+& {
 		margin: -1rem 0 0 0;
-		background-color: $main-color;
-		color: white;
+		@include invert;
 		padding: $figure-padding;
 	}
 }
