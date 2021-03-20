@@ -9,11 +9,34 @@ changes:
   - 미작성이었던 [표준이 왜 이따위인가?](#bad-spec)와 [대안](#alternatives) 섹션을 마저 작성.
   - 2021-03-09
   - “소숫점이 없는 정수에 범위 제한이 있는가?” 항목이 왜 문제가 되는지 구체적으로 부연.
+  - 2021-03-20
+  - 여는 예제를 추가함.
 ---
 
-[JSON](https://en.wikipedia.org/wiki/JSON)은 자바스크립트의 (거의) 부분집합으로 시작해서 현재는 언어 불문하고 아주 널리 쓰이는 {{<a serialization 직렬화>}} 포맷이다.
+[JSON](https://en.wikipedia.org/wiki/JSON)은 {{<a javascript 자바스크립트>}}의 (거의) 부분집합으로 시작해서 현재는 언어 불문하고 아주 널리 쓰이는 {{<a serialization 직렬화>}} 포맷이다.
 사실상 모든 프로그래밍 언어에 JSON 라이브러리가 있다고 보아도 좋다.
 JSON보다 30년 정도 이전에 나온 [Apple II에서 돌아가는 JSON 라이브러리](https://github.com/ppelleti/json65)도 있을 정도이다.
+
+{{%fig compact-pre%}}
+
+```json
+{
+  "": null,
+  "excluded middle": [true, false],
+  "pi": {
+    "integer": 3,
+    "decimal": 3.141592,
+    "von Neumann ordinal": [{}, [{}], [{}, [{}]]]
+  },
+  "https://tvtropes.org/pmwiki/pmwiki.php/Main/DyingClue":
+    "🍖고기 먹고 싶다\r\n\ud83d\uDC1F앗 물고기잖아?!"
+}
+```
+
+{{%caption%}}
+JSON에서 가능한 모든 종류의 값({{<a NULL>}}, {{<a boolean 불린형>}}, 정수, 소수, {{<a string 문자열>}}, {{<a array 배열>}}, 오브젝트)을 사용하는 예제.
+{{%/caption%}}
+{{%/fig%}}
 
 {{<claim>}}
 **JSON은 쓰레기다.**

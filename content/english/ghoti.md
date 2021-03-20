@@ -57,7 +57,7 @@ Ghoti는 {{<a "english/spelling-reform" 영어 철자 개혁>}}을 지지하는 
 
 * Woman과 women은 고대 영어에서 둘 다 [wīfmann](https://en.wiktionary.org/wiki/wifmann#Old_English)과 [wīfmenn](https://en.wiktionary.org/wiki/wifmenn#Old_English)으로 {{<ipa ang iː>}} 발음이었다.
   이것이 보통은 {{<ipa en ɪ>}}가 되었어야 하나,
-  앞선 {{<ipa ang w>}}의 영향으로 **단수만** {{<ipa en ʊ>}}가 된 것을 복수가 발음 없이 표기만 따라간 것이다.
+  앞선 {{<ipa ang w>}}의 영향으로 **단수만** {{<ipa en ʊ>}}가 된 것을 복수가 발음 변화 없이 표기만 따라간 것이다.
 
 * People의 경우 중세 영어에서 puple, peple, peeple 등으로 다양하게 표기되던 것이 정착된 것으로,
   [왜 people이 되었는지는 확실하지 않다](https://english.stackexchange.com/a/162187).
