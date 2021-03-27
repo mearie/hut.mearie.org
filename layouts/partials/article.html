@@ -11,7 +11,11 @@
 <header>
 
 {{- with .Parent }}<hgroup><h2>{{ template "breadcrumb" . }}</h2>{{ end -}}
-{{- with .Title -}}<h1>{{ . }}</h1>{{ end -}}
+{{- if index .Params "title-render" -}}
+<h1{{ with .Title }} title="{{ . }}"{{ end }}>{{ index .Params "title-render" | markdownify }}</h1>
+{{- else if .Title -}}
+<h1>{{ .Title }}</h1>
+{{- end -}}
 {{- if .Parent }}</hgroup>{{ end -}}
 
 {{- with .Params.changes -}}
