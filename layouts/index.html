@@ -6,7 +6,7 @@
 {{ with .Pages -}}
 <nav>
 {{ range .GroupByParam "categories" -}}
-{{ with $.Site.GetPage "categories" .Key -}}<h2>{{ .Title }}</h2>{{ end -}}
+{{ with $.Site.GetPage (printf "/categories/%s" .Key) -}}<h2>{{ .Title }}</h2>{{ end -}}
 <ul class="keywords">
 {{- range .Pages -}}
 <li><a class="keyword{{ if .Draft }} draft{{ end }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
