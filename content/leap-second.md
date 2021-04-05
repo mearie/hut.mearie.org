@@ -81,7 +81,7 @@ console.log(`LOD delta: ${loy / ndays * 1000}ms +/- ${loyerr / ndays * 1000}ms`)
 -->
 
 하루의 길이가 계속 늘어난다는 것은, 윤초가 없을 때의 오차는 시간이 지날수록 **제곱**으로 늘어난다는 얘기다.
-이 때문에 캘리포니아 대학교 [릭 천문대](http://mthamilton.ucolick.org/)의 Steve Allen 같은 사람은 [윤초를 폐지해서는 안된다](https://www.ucolick.org/~sla/leapsecs/)고 강력하게 주장한다.
+이 때문에 캘리포니아 대학교 [릭 천문대](http://mthamilton.ucolick.org/)의 스티브 앨런(Steve Allen) 같은 사람은 [윤초를 폐지해서는 안된다](https://www.ucolick.org/~sla/leapsecs/)고 강력하게 주장한다.
 요컨대 **초의 정의를 바꾸거나, 평균 태양시의 의미를 축소시키지 않는 한 윤초나 그와 유사한 메커니즘은 피할 수 없다**는 것이다.
 많은 국가에서 정오 즈음에 태양이 가장 높이 뜬다는 것을 당연시 여기고 있는데,
 윤초가 없으면 [500년 안에](https://www.ucolick.org/~sla/leapsecs/dutc.html) 이 가정이 눈에 띄일 정도로 틀어지게 된다.

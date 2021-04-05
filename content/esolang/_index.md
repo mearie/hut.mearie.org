@@ -13,10 +13,10 @@ changes:
 의도하지 않았는데 **어쩌다 보니** 난해해진 경우까지 다양한 언어를 포괄한다.
 물론 대부분은 장난이다.
 
-난해한(esoteric)이라는 수식어는 {{<a befunge 비펀지>}}를 만든 Chris Pressey가 자기 사이트 제목을 “[컴퓨터 프로그래밍의 난해한 주제들](https://web.archive.org/web/20001018125616/http://www.catseye.mb.ca/esoteric/index.html)”이라고 붙인 것이 원전으로 추측된다.
+난해한(esoteric)이라는 수식어는 {{<a befunge 비펀지>}}를 만든 크리스 프레시(Chris Pressey)가 자기 사이트 제목을 “[컴퓨터 프로그래밍의 난해한 주제들](https://web.archive.org/web/20001018125616/http://www.catseye.mb.ca/esoteric/index.html)”이라고 붙인 것이 원전으로 추측된다.
 한국어 번역어는 어쩌다 보니 [내가 결정한 것 같다](https://ko.wikipedia.org/w/index.php?title=%EB%B8%8C%EB%A0%88%EC%9D%B8%ED%8D%BD&diff=22597&oldid=22571).
 
-## 바깥 링크
+## 같이 보기
 
 * [난해한 프로그래밍 언어 위키](https://esolangs.org/wiki/Main_Page).
 

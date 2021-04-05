@@ -8,7 +8,7 @@ changes:
   - 허튼소리로 옮긴 뒤 윤문.
 ---
 
-[브레인퍽](https://en.wikipedia.org/wiki/Brainfuck)(Brainfuck)은 1993년에 Urban Müller가 만든 {{<a esolang 난해한 프로그래밍 언어>}}이다.
+[브레인퍽](https://en.wikipedia.org/wiki/Brainfuck)(Brainfuck)은 1993년에 우어반 뮐러(Urban Müller)가 만든 {{<a esolang 난해한 프로그래밍 언어>}}이다.
 
 {{%fig%}}
 

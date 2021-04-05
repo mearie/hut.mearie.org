@@ -8,7 +8,7 @@ changes:
   - 허튼소리로 옮기고 윤문 및 내용 추가.
 ---
 
-[C](https://en.wikipedia.org/wiki/C_(programming_language))는 1970년대에 Dennis Ritchie가 {{<a unix 유닉스>}} 운영체제에 쓰려고 만든 것이 시초인 {{<a programming-language 프로그래밍 언어>}}이다.
+[C](https://en.wikipedia.org/wiki/C_(programming_language))는 1970년대에 데니스 리치(Dennis Ritchie)가 {{<a unix 유닉스>}} 운영체제에 쓰려고 만든 {{<a programming-language 프로그래밍 언어>}}이다.
 
 {{%fig compact-pre%}}
 
@@ -20,7 +20,7 @@ main()
 ```
 
 {{%caption%}}
-[*The C Programming Language* 1판](https://archive.org/details/TheCProgrammingLanguageFirstEdition/page/n13/mode/1up)<!-- p. 6 -->에 나오는 최초의 “{{<a hello-world "Hello, world!">}}” 프로그램.
+[《C 프로그래밍 언어(*The C Programming Language*)》 1판](https://archive.org/details/TheCProgrammingLanguageFirstEdition/page/n13/mode/1up)<!-- p. 6 -->에 나오는 최초의 “{{<a hello-world "Hello, world!">}}” 프로그램.
 {{%/caption%}}
 {{%/fig%}}
 
@@ -35,7 +35,7 @@ C 하면 바로 생각나는 {{<a curly-brace 중괄호>}}를 사용한 문법�
 
 ## 버전 {#versions}
 
-Brian **K**ernighan과 Dennis **R**itchie가 쓴 책 *The C Programming Language*는 오랫동안 {{<a "k-and-r" "K&R">}} C라 불리며 사실상의 C 표준으로 취급받았다.
+브라이언 커니핸(Brian **K**ernighan)과 데니스 리치(Dennis **R**itchie)가 쓴 책 《C 프로그래밍 언어(*The C Programming Language*)》는 오랫동안 {{<a "k-and-r" "K&R">}} C라 불리며 사실상의 C 표준으로 취급받았다.
 이후 {{<a ANSI>}} X3.159(통칭 ANSI C) 및 {{<a ISO>}}/{{<a IEC>}} 9899(통칭 ISO C)로 {{<a "programming-language/standardization" 표준화>}}되어 현재에 이른다.
 K&R C를 제외하면 표준이 나온 연도에 따라 C 뒤에 {{<a "gregorian-calendar/two-digit-year" 두 자리 연도>}}를 붙이는 것이 관례이며,
 다음에 나올 표준은 보통 C2x와 같이 마지막 자리를 생략한다.
