@@ -1,5 +1,5 @@
 {{- if findRE "^[a-z0-9-.]+$" .Anchor -}}
-<h{{ .Level }} id="{{ .Anchor | safeURL }}">{{ .Text | safeHTML }}</h{{ .Level }}>
+<h{{ .Level }} id="{{ .Anchor | safeURL }}">{{ .Text | safeHTML }} <a class="link-to-here" href="#{{ .Anchor | safeURL }}" title="이 제목으로 링크하기">#</a></h{{ .Level }}>
 {{- else -}}
 <h{{ .Level }}>{{ .Text | safeHTML }}</h{{ .Level }}>
 {{- end }}

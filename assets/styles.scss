@@ -28,6 +28,10 @@ html {
 }
 :lang(en), [lang$=-fonipa] {
 	font-family: 'Noto Serif', serif;
+
+	pre#{&}, code#{&} {
+		font-family: monospace;
+	}
 }
 body {
 	width: 50rem;
@@ -77,6 +81,17 @@ h6 {
 	font-size: 1rem;
 	margin: 0 1rem 0 0;
 	float: left;
+}
+h1, h2, h3 {
+	& > .link-to-here {
+		display: none;
+	}
+	&:hover, &:focus {
+		& > .link-to-here {
+			display: inline;
+			color: gray;
+		}
+	}
 }
 
 ul, ol {
@@ -176,6 +191,7 @@ pre {
 	tab-size: 4;
 	padding: 0.5em;
 	overflow-x: auto;
+	font-family: monospace;
 
 	.compact-pre & {
 		line-height: 1;
