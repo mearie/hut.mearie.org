@@ -12,6 +12,6 @@
 {{- with $page -}}
 <a class="keyword{{ if .Draft }} draft{{ end }}" href="{{ .RelPermalink }}{{ with $url.Fragment }}#{{ . | safeURL }}{{ end }}"{{ with $.Title }} title="{{ . }}"{{ end }}>{{ $.Text | safeHTML }}</a>
 {{- else -}}
-<a class="dead" {{ with $.Title }} title="{{ . }}"{{ end }}>{{ $.Text | safeHTML }}</a>
+<a class="dead" href="{{ relref .Page "/not-found" }}#{{ .Page.RelPermalink }}:{{ $path }}" {{ with $.Title }} title="{{ . }}"{{ end }}>{{ $.Text | safeHTML }}</a>
 {{- end -}}
 {{- end -}}
