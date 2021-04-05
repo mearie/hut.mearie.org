@@ -8,13 +8,13 @@ changes:
   - 허튼소리로 옮기고 윤문.
 ---
 
-[프로그래밍 언어](https://en.wikipedia.org/wiki/Programming_language)(programming language)는 {{<a computer 컴퓨터>}} {{<a program 프로그램>}}을 기술하는 소스 코드에 대한 {{<a formal-language 형식 언어>}}이다.
+[프로그래밍 언어](https://en.wikipedia.org/wiki/Programming_language)(programming language)는 [컴퓨터](computer) [프로그램](program)을 기술하는 소스 코드에 대한 [형식 언어](formal-language)이다.
 소스 코드 없이 프로그램을 작성할 수는 있지만 아주 귀찮은데다 그렇게 해서 얻는 이득도 없으므로,
 프로그래밍 언어는 프로그래밍에서 빼 놓을 수 없는 요소이다.
-‘언어’라고 해서 {{<a linguistics 언어학>}}의 범주에 들어간다고 생각하는 사람들이 은근 있지만,
+‘언어’라고 해서 [언어학](linguistics)의 범주에 들어간다고 생각하는 사람들이 은근 있지만,
 형식 언어라는 공통의 개념을 공유하는 것 빼고는 저어어언혀어어어 상관이 없다.
 
-프로그래밍 언어의 분류는 {{<a programming-paradigm 프로그래밍 패러다임>}}과 밀접하게 연관되어 있다.
+프로그래밍 언어의 분류는 [프로그래밍 패러다임](programming-paradigm)과 밀접하게 연관되어 있다.
 언어 및 그에 연관된 패러다임의 선택에 따라 쉽게 작성·관리할 수 있는 프로그램과 그렇지 않은 프로그램이 갈리는데,
-이를 객관적으로 입증하기가 어렵기 때문에 프로그래밍 언어와 패러다임은 {{<a religion 종교>}}화되는 경우가 흔하다.
+이를 객관적으로 입증하기가 어렵기 때문에 프로그래밍 언어와 패러다임은 [종교](religion)화되는 경우가 흔하다.
 

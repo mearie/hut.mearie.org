@@ -9,7 +9,7 @@ changes:
     [윤시간대](#leap-hour-time-zone)에 대한 주장을 추가.
 ---
 
-{{<a utc 협정 세계시>}}(UTC)에서 윤초(leap second)는 평균 태양시와의 오차를 보정하기 위해 가끔 추가되거나 삭제되는 {{<a second 초>}}를 가리킨다.
+[협정 세계시](utc)(UTC)에서 윤초(leap second)는 평균 태양시와의 오차를 보정하기 위해 가끔 추가되거나 삭제되는 [초](second)를 가리킨다.
 
 하루의 길이(LOD, length of day)는 정확히 86 400초가 아니고,
 지구 자전 속도의 변화에 따라 바뀔 수 있어서 일정하지 않다.
@@ -45,8 +45,8 @@ DUT1 자체의 오차는 ±0.1초 이하여야 하며 DUT1 자체는 오차까�
 따라서 일반적으로 **6개월 이후의 윤초는 예측할 수 없다.**
 
 일단 윤초가 결정되면 세계 언론에 전파되며,
-{{<a tz-database tz 데이터베이스>}} 같은 곳이나 소프트웨어 업데이트 등을 통해 실제로 적용된다.
-시보국이나 {{<a GPS>}} 신호 등에서도 미래의 윤초 정보를 미리 전달하기 때문에,
+[tz 데이터베이스](tz-database) 같은 곳이나 소프트웨어 업데이트 등을 통해 실제로 적용된다.
+시보국이나 [GPS]() 신호 등에서도 미래의 윤초 정보를 미리 전달하기 때문에,
 이론적으로 전파 수신 환경이 갖춰져 있으면 윤초에 대응할 수는 있다. **어떻게든.**
 
 ## 난점 {#difficulty}
@@ -96,7 +96,7 @@ console.log(`LOD delta: ${loy / ndays * 1000}ms +/- ${loyerr / ndays * 1000}ms`)
 대표적으로 **[윤분](http://hanksville.org/futureofutc/program/presentations/11_AAS_13-510.ppt.pdf)**(leap minute) 또는 **[윤시](http://www.leapsecond.com/LEAPHOUR/)**(leap hour)라고 하는 것이 있다.
 윤초와 기본적인 개념은 같으나,
 한 번에 1분 또는 1시간만큼씩 조정해서 빈도를 그에 반비례하여 수십년 또는 수백년에 한 번 꼴로 줄이려 하는 점이 다르다.
-이에 윤초 존치 측에서는 오히려 빈도가 적어지면 테스트가 안 되어서 {{<a Y2K>}} 수준의 마이그레이션이 필요할 수 있는 것 아니냐고 반박한다.
+이에 윤초 존치 측에서는 오히려 빈도가 적어지면 테스트가 안 되어서 [Y2K]() 수준의 마이그레이션이 필요할 수 있는 것 아니냐고 반박한다.
 
 {{%twen 1329314793908359170%}}
 I'm a diehard proponent of leap hours. We would only adjust UTC by an hour when ΔT reaches, say, ±2000s, not ±0.7s today. Every single application sensitive to length-of-day changes is already using the Terrestrial Time (TT), so we have much larger headroom for civil timekeeping. Leap hours are much doable than leap seconds because we already have a regular (uh, irregular in fact) adjustment to the civil time, namely “daylight saving” time. We can treat a leap hour as a large swath of time zone offset changes instead—already possible with tzdata today!
@@ -117,12 +117,12 @@ I'm a diehard proponent of leap hours. We would only adjust UTC by an hour when 
 
 구체적인 예로, 2500년에 (양의) 윤시간대가 추가된다 하면 본래의 UTC 옆에 제1 수정 협정 세계시(UTC<sub>1</sub>)가 추가될 것이다.
 UTC<sub>1</sub>은 윤시 때문에 한 시간 앞당겨져서 1:00 UTC = 0:00 UTC<sub>1</sub>이 된다.
-본래의 UTC 자체는 변화가 없기 때문에 이를테면 {{<a korea-standard-time 한국 표준시>}}(KST)는 이 시점에서도 UTC+9일 것이나,
+본래의 UTC 자체는 변화가 없기 때문에 이를테면 [한국 표준시](korea-standard-time)(KST)는 이 시점에서도 UTC+9일 것이나,
 필요하다면 법령 개정을 통해 UTC+9에서 UTC<sub>1</sub>+9 = UTC+8로 전환할 수 있다.
 이 때 이를테면 영국이 아직 전환을 하지 않았다면 영국과의 시차는 일시적으로 한 시간 줄어들게 되는데,
-이미 영국은 {{<a summer-time 서머 타임>}}을 실시하고 있기 때문에 시차가 한 시간 왔다 갔다 하는 건 새삼스러운 일이 아니다.
+이미 영국은 [서머 타임](summer-time)을 실시하고 있기 때문에 시차가 한 시간 왔다 갔다 하는 건 새삼스러운 일이 아니다.
 
-윤시간대는 “{{<a time-zone 시간대>}}”라는 개념 자체가 [근시일 내에 사라질 수 없다](https://qntm.org/abolish)는 가정에 기반한다.
+윤시간대는 “[시간대](time-zone)”라는 개념 자체가 [근시일 내에 사라질 수 없다](https://qntm.org/abolish)는 가정에 기반한다.
 우주라면 또 모르겠지만, 적어도 지구 상에서는 평균 태양시와 비슷한 지역 시간대를 쓰려는 요구가 지속적으로 있을 것이다.
 이 때문에 서로 다른 시간대의 존재와, 그 시간대의 오프셋이 시간에 따라 바뀔 수 있다는 점 또한 소프트웨어에 이미 반영되어 있고 뭘 또 새로 만들 필요가 없다.
 그럼 이미 있는 시간대 오프셋을 윤초 비스무리한 것을 구현하는 데 재활용하는 것이 합당한 것이다.

@@ -1,0 +1,17 @@
+{{- $path := .Destination | default (urlize $.PlainText) -}}
+{{- $url := urls.Parse $path -}}
+{{- if or $url.Scheme (not $url.Path) -}}
+<a href="{{ $path | safeURL }}"{{ with $.Title }} title="{{ . }}"{{ end }}>{{ $.Text | safeHTML }}</a>
+{{- else -}}
+{{- $page := false -}}
+{{- if hasPrefix $url.Path "." -}}
+{{-     $page = $.Page.GetPage $url.Path -}}
+{{- else -}}
+{{-     $page = $.Page.Site.GetPage $url.Path -}}
+{{- end -}}
+{{- with $page -}}
+<a class="keyword{{ if .Draft }} draft{{ end }}" href="{{ .RelPermalink }}{{ with $url.Fragment }}#{{ . | safeURL }}{{ end }}"{{ with $.Title }} title="{{ . }}"{{ end }}>{{ $.Text | safeHTML }}</a>
+{{- else -}}
+<a class="dead" {{ with $.Title }} title="{{ . }}"{{ end }}>{{ $.Text | safeHTML }}</a>
+{{- end -}}
+{{- end -}}

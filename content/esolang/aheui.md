@@ -6,7 +6,7 @@ changes:
   - 초벌 작성.
 ---
 
-[아희](https://aheui.readthedocs.io/ko/latest/)는 2005년에 정경훈(Puzzlet Chung)이 만든 {{<a hangul 한글>}} {{<a esolang 난해한 프로그래밍 언어>}}이다.
+[아희](https://aheui.readthedocs.io/ko/latest/)는 2005년에 정경훈(Puzzlet Chung)이 만든 [한글](hangul) [난해한 프로그래밍 언어](esolang)이다.
 
 {{%fig compact-pre%}}
 
@@ -22,7 +22,7 @@ changes:
 ```
 
 {{%caption%}}
-“{{<a hello-world "Hello, world!">}}” 프로그램과 그 실행 궤적.
+“[Hello, world!]()” 프로그램과 그 실행 궤적.
 잘 알려져 있진 않지만 이 코드는 내가 짰다.
 {{%/caption%}}
 {{%/fig%}}

@@ -7,14 +7,14 @@ changes:
   - 해커뉴스에 올렸던 글을 바탕으로 초벌 작성.
 ---
 
-[부동 소숫점](https://en.wikipedia.org/wiki/Floating-point_arithmetic)(floating point)은 유효 자릿수를 일정 이하로 제한하여 {{<a real-number 실수>}}를 근사하는 표현 방법이다.
-이를테면 `$\frac12$`과 {{<a pi 원주율>}}(3.141592...)은 유효 자릿수가 십진법 네 자리로 제한되어 있으면 각각 다음과 같이 표현할 수 있다.
+[부동 소숫점](https://en.wikipedia.org/wiki/Floating-point_arithmetic)(floating point)은 유효 자릿수를 일정 이하로 제한하여 [실수](real-number)를 근사하는 표현 방법이다.
+이를테면 `$\frac12$`과 [원주율](pi)(3.141592...)은 유효 자릿수가 십진법 네 자리로 제한되어 있으면 각각 다음과 같이 표현할 수 있다.
 `$$ \frac12 = 5.000 \times 10^{-1} \qquad \pi \approx 3.142 \times 10^0 $$`
 여기서 `$\frac12$`은 남는 자리에 0이 채워졌고,
 원주율은 자리가 모자라서 소숫점 넷째 자리에서 반올림되었다.
 
-부동 소숫점, 특히 **{{<a ieee-754 IEEE 754>}}** 표준은 컴퓨터에서 실수 표현에 널리 쓰이며 아주 빠르게 계산할 수 있다.
-{{<a fixed-point 고정 소숫점>}} 표현과 비교할 때 부동 소숫점은 “통상적인 값”의 정밀도를 조금 희생하여 너무 작거나 너무 큰 “예외적인 값”을 쉽게 표현할 수 있다는 장점이 있다.
+부동 소숫점, 특히 [**IEEE 754**]() 표준은 컴퓨터에서 실수 표현에 널리 쓰이며 아주 빠르게 계산할 수 있다.
+[고정 소숫점](fixed-point) 표현과 비교할 때 부동 소숫점은 “통상적인 값”의 정밀도를 조금 희생하여 너무 작거나 너무 큰 “예외적인 값”을 쉽게 표현할 수 있다는 장점이 있다.
 그러나 일반적인 수학 상식과 어긋나는 비직관적인 결과가 많이 나와 다루기 까다로운 자료형이기도 하다.
 그러므로 부동 소숫점을 사용하기 전에는 항상 다음 질문에 답해야 한다.
 
@@ -28,7 +28,7 @@ changes:
 
 * 십진법 포맷을 쓸 수 있는가?
   같은 부동 소숫점이라도 십진법이면 문제를 파악하기 더 쉬울 수 있다.
-  {{<a python 파이썬>}} [`decimal` 모듈](https://docs.python.org/3/library/decimal.html) 같이 내장되어 있는 경우도 흔하다.
+  [파이썬](python) [`decimal` 모듈](https://docs.python.org/3/library/decimal.html) 같이 내장되어 있는 경우도 흔하다.
 
 * 오류 분석을 하고 있는가?
   부동 소숫점을 성능 때문에 포기할 수 없다면,
@@ -36,9 +36,9 @@ changes:
 
 ## 두 가지 모델 {#to-models-of-fp}
 
-{{<hn 20837353>}}
+{{%hn 20837353%}}
 Maybe the parent wanted to say that the result is detetministic and not far too off from the true value (in fact, as accurate as possible given the format). In the other words FP is exact but abides by a slight different calculation rule involving rounding.
-{{</hn>}}
+{{%/hn%}}
 
 부동 소숫점은 크게 두 가지 모델로 바라볼 수 있다.
 첫번째는 **특수한 법칙을 따르는 정확한 자료형**이다.

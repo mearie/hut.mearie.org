@@ -6,8 +6,8 @@ changes:
   - 한국 러스트 사용자 그룹에서의 대화로부터 영감을 받아 첫 작성.
 ---
 
-앞서 보기(lookahead) 스트림은 {{<a stream 스트림>}} 중에서도 다음에 읽을 원소를 최대 k개까지 볼 수 있는 기능을 제공하는 {{<a data-type 자료형>}}이다.
-{{<a parsing 파싱>}}에 특히 유용하게 쓰이는데,
+앞서 보기(lookahead) 스트림은 [스트림](stream) 중에서도 다음에 읽을 원소를 최대 k개까지 볼 수 있는 기능을 제공하는 [자료형](data-type)이다.
+[파싱](parsing)에 특히 유용하게 쓰이는데,
 대부분의 파서에서는 다음 입력(들)을 보고 다음에 할 동작을 결정해야 하기 때문이다.
 이를테면 문자로 이루어진 스트림이 앞서 보기를 지원할 경우 `123` 등의 정수를 이렇게 읽을 수 있다.
 
@@ -22,7 +22,7 @@ changes:
 이러한 동작은 다음에 있는 원소를 읽는 기능만 있을 경우 불가능하다.
 
 앞서 보기를 할 수 없는 경우 파싱할 수 있는 언어가 크게 줄어든다는 것이 이론적으로 알려져 있으며,
-특정 종류의 파서에서 최소 k개의 원소를 앞서 볼 수 있어야 파싱할 수 있는 언어를 {{<a ll-parser "LL(k)">}}, {{<a lr-parser "LR(k)">}}, {{<a lalr-parser "LALR(k)">}} 등으로 따로 부른다.
+특정 종류의 파서에서 최소 k개의 원소를 앞서 볼 수 있어야 파싱할 수 있는 언어를 [LL(k)](ll-parser), [LR(k)](lr-parser), [LALR(k)](lalr-parser) 등으로 따로 부른다.
 현실에서 보게 되는 거의 모든 문법들은 k ≤ 1이므로 앞서 보기 스트림도 k = 1로 구현된 경우가 가장 흔하다.
 
 이러한 유용성에도 불구하고 앞서 보기 스트림의 인터페이스는 표준화가 잘 되어 있지 않은데다,
@@ -46,7 +46,7 @@ changes:
 
 ###### 주요 사례
 
-{{<a Rust>}} [`std::iter::Peekable`](https://doc.rust-lang.org/std/iter/struct.Peekable.html) 등.
+[Rust]() [`std::iter::Peekable`](https://doc.rust-lang.org/std/iter/struct.Peekable.html) 등.
 
 ## 인자 없는 `unread` {#unread-without-argument}
 
@@ -59,7 +59,7 @@ changes:
 
 `unread()`의 k개 제한은 다소 이해하기 어려울 수 있는데,
 보통 스트림에 있는 전체 입력을 다 가지고 있는 게 아니라 필요할 때마다 읽어 들이기 때문에,
-고정 크기의 {{<a array 배열>}}에 최근 입력을 보존하려다 보니 생기는 제한이다.
+고정 크기의 [배열](array)에 최근 입력을 보존하려다 보니 생기는 제한이다.
 전체 입력을 바로 꺼내 볼 수 있는 경우 이런 제한은 필요하지 않다.
 
 이 접근은 호출 숫자를 크게 줄일 수 있어서 특히 파서를 손으로 직접 짤 때 흔히 쓰인다.
@@ -67,7 +67,7 @@ changes:
 
 ## 인자 있는 `unread` {#unread-with-argument}
 
-이 인터페이스에서는 내부적으로 최대 k개까지의 입력을 보존할 수 있는 {{<a stack 스택>}}이 있어서,
+이 인터페이스에서는 내부적으로 최대 k개까지의 입력을 보존할 수 있는 [스택](stack)이 있어서,
 다음 연산을 지원한다.
 
 * `next := read()`는 **스택에 값이 있으면 맨 위의 값을 꺼내서 반환하고,**
@@ -87,7 +87,7 @@ changes:
 
 {{% note %}}
 
-실제 사례로서, `<`와 `>`를 (주로 {{<a generic-type 일반화 타입>}}의) 구분자로 쓰는 언어에서는 `>>`와 혼동되는 것을 어떻게든 해결할 필요가 있다.
+실제 사례로서, `<`와 `>`를 (주로 [일반화 타입](generic-type)의) 구분자로 쓰는 언어에서는 `>>`와 혼동되는 것을 어떻게든 해결할 필요가 있다.
 파서가 토큰화 단계와 소통을 한다거나 하는 다양한 방법으로 해결할 수 있는데,
 [카일루아](https://github.com/devcat-studio/kailua/)의 경우 `>>`를 두 개의 `>`로 처리해야 하는 상황이 되면 [하나의 `>`만 처리한 뒤에 다른 `>`를 스트림에 되돌려 넣는 방법](https://github.com/devcat-studio/kailua/blob/323caab/kailua_syntax/src/parser.rs#L2469-L2478)을 썼다.
 보통 이러한 상황은 버그이기 때문에 다른 데서는 `unread()`를 직접 쓰지 않고 [매크로로 감싸](https://github.com/devcat-studio/kailua/blob/323caab/kailua_syntax/src/parser.rs#L319-L350) 사용하였다.
@@ -96,7 +96,7 @@ changes:
 
 ###### 주요 사례
 
-{{<a c-language C>}} [`ungetc`](https://en.cppreference.com/w/c/io/ungetc) 등.
+[C](c-language) [`ungetc`](https://en.cppreference.com/w/c/io/ungetc) 등.
 
 ## 체크포인트 {#checkpoint}
 
@@ -117,6 +117,6 @@ changes:
 ###### 주요 사례
 
 엄밀히는 스트림은 아니지만,
-{{<a javascript 자바스크립트>}} [`RegExp.lastIndex`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex)가 이 인터페이스와 아주 유사하다.
+[자바스크립트](javascript) [`RegExp.lastIndex`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex)가 이 인터페이스와 아주 유사하다.
 이 때문에 가볍게 짠 자바스크립트 파서에서 특히 이런 접근이 자주 보인다.
 

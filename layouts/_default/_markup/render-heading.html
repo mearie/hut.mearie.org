@@ -1,0 +1,5 @@
+{{- if findRE "^[a-z0-9-.]+$" .Anchor -}}
+<h{{ .Level }} id="{{ .Anchor | safeURL }}">{{ .Text | safeHTML }}</h{{ .Level }}>
+{{- else -}}
+<h{{ .Level }}>{{ .Text | safeHTML }}</h{{ .Level }}>
+{{- end }}

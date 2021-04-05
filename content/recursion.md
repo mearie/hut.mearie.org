@@ -8,11 +8,11 @@ changes:
 
 [재귀](https://en.wikipedia.org/wiki/Recursion)(recursion)는 통상적으로는 자가 참조(self-reference)를 가리킨다.
 예를 들어서 이 문단에는 한글만 세어서 일흔 두개의 글자와 스물 네개의 낱말이 있다.
-(이러한 식의 자가 참조를 {{<a autogram 오토그램>}}이라고 부른다.)
+(이러한 식의 자가 참조를 [오토그램](autogram)이라고 부른다.)
 
 **그러나 재귀와 자가 참조는 다르다.**
-수학과 {{<a programming 프로그래밍>}}에서 재귀는 귀납적인(inductive) 구조를 이른다.
-이를테면 {{<a peano-axiom 페아노 공리>}}에 따라 0을 포함하는 {{<a natural-number 자연수>}}는 다음과 같이 재귀적·귀납적으로 정의할 수 있다.
+수학과 [프로그래밍](programming)에서 재귀는 귀납적인(inductive) 구조를 이른다.
+이를테면 [페아노 공리](peano-axiom)에 따라 0을 포함하는 [자연수](natural-number)는 다음과 같이 재귀적·귀납적으로 정의할 수 있다.
 
 1. 바탕 단계: 0은 자연수이다.
 
@@ -29,7 +29,7 @@ changes:
 자가 참조만으로는 그런 유용성을 보장할 수 없다.
 
 더 나아가서, Shriram Krishnamurthi는 〈[재귀를 가르치지 않는 방법](https://parentheticallyspeaking.org/articles/how-not-to-teach-recursion/)〉이라는 글에서 재귀를 가르치는 데 흔히 쓰는 예시들이 엉터리라는 것을 지적한다.
-그는 유용한 재귀를 크게 문제 자체가 ({{<a "data-structure/tree" 트리>}}와 같이) 자연스럽게 재귀적으로 기술되는 경우와,
+그는 유용한 재귀를 크게 문제 자체가 ([트리](data-structure/tree)와 같이) 자연스럽게 재귀적으로 기술되는 경우와,
 그렇지 않은 경우(generative recursion) 둘로 나눌 수 있다는 걸 지적하며,
 전자에 해당하는 귀납적인 구조를 먼저 가르치고 후자를 나중에 가르쳐야 한다고 지적한다.
 동감하는 바이다.

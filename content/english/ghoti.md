@@ -8,7 +8,7 @@ changes:
 ---
 
 [Ghoti](https://en.wikipedia.org/wiki/Ghoti)는 [fish](https://en.wiktionary.org/wiki/fish#English)의 다른 (그리고 **[잘못된](#impossibility)**) 철자이다.
-이런 이유로 fish와 같은 {{<ipa en fɪʃ>}}({{<a IPA 국제 음성 기호>}})로 읽을 수 있다 한다.
+이런 이유로 fish와 같은 {{<ipa en fɪʃ>}}([국제 음성 기호](IPA))로 읽을 수 있다 한다.
 
 * gh는 [enough](https://en.wiktionary.org/wiki/enough#English), [tough](https://en.wiktionary.org/wiki/tough#English) 등의 낱말에서 {{<ipa en f>}}로 발음된다.
 * o는 [women](https://en.wiktionary.org/wiki/women#English)에서 {{<ipa en ɪ>}}로 발음된다.
@@ -21,13 +21,13 @@ changes:
 * t는 [ballet](https://en.wiktionary.org/wiki/ballet#English), [gourmet](https://en.wiktionary.org/wiki/gourmet), [mortgage](https://en.wiktionary.org/wiki/mortgage) 등의 낱말에서 발음되지 않는다.
 * i는 [business](https://en.wiktionary.org/wiki/business#English) 등의 낱말에서 발음되지 않는다.
 
-Ghoti는 {{<a "english/spelling-reform" 영어 철자 개혁>}}을 지지하는 근거로 종종 쓰이는데,
+Ghoti는 [영어 철자 개혁](english/spelling-reform)을 지지하는 근거로 종종 쓰이는데,
 철자 개혁의 강력한 지지자로도 유명했던 극작가 조지 버나드 쇼(George Bernard Shaw)가 제시했다는 얘기가 많이 있지만 근거는 없다.
 
 그러거나 말거나 ghoti라는 낱말은 널리 퍼져서,
-{{<a klingon 클링온>}} 언어에서 어류를 뜻하는 낱말이 [ghotI'](https://en.wiktionary.org/wiki/Appendix:Klingon/ghotI%27)라거나(물론 발음은 완전히 다르다),
+[클링온](klingon) 언어에서 어류를 뜻하는 낱말이 [ghotI'](https://en.wiktionary.org/wiki/Appendix:Klingon/ghotI%27)라거나(물론 발음은 완전히 다르다),
 《피네간의 경야》의 각주에서 [뜬금 없이 튀어 나온다](http://www.finwake.com/1024chapter22/1024fwtekst22.htm#299)거나,
-심지어 어떤 {{<a speech-synthesis 음성 합성기>}}는 ghoti를 하드코딩해서 fish라고 발음하게 하는 코드가 있었다는 얘기까지 있다.
+심지어 어떤 [음성 합성기](speech-synthesis)는 ghoti를 하드코딩해서 fish라고 발음하게 하는 코드가 있었다는 얘기까지 있다.
 
 ## 불가능 {#impossibility}
 
@@ -48,7 +48,7 @@ Ghoti는 {{<a "english/spelling-reform" 영어 철자 개혁>}}을 지지하는 
   Mortgage의 경우 원래 두 낱말인 mort gage이었다.
   Ghoti는 어딜 봐도 프랑스어처럼 보이지 않는데다 -t-는 어말에 있지도 않다.
 
-* Business의 -i-는 강세가 없기 때문에 약한 {{<ipa en ə>}}({{<a schwa 슈와>}})를 거쳐 사라질 수 있다.
+* Business의 -i-는 강세가 없기 때문에 약한 {{<ipa en ə>}}([슈와](schwa))를 거쳐 사라질 수 있다.
   ([이 발음이 실제로 얼마나 보편화되었는지는 이견이 있다.](https://www.quora.com/Is-business-the-only-English-word-with-a-silent-i))
   반면 어말 -i는 강세가 없더라도 일반적으로 약화되지 않으며,
   comma나 happy 같은 낱말에서만 제한적으로 슈와로 바뀔 수 있다.
