@@ -4,6 +4,8 @@ categories: computing
 changes:
 - - 2021-04-05
   - 첫 작성.
+  - 2021-04-11
+  - 인명을 한글 발음으로 대체.
 ---
 
 [재귀](https://en.wikipedia.org/wiki/Recursion)(recursion)는 통상적으로는 자가 참조(self-reference)를 가리킨다.
@@ -28,7 +30,7 @@ changes:
 귀납적인 구조는 (설령 그 결과가 무한하더라도) 그 의미를 하나로 확정지을 수 있기 때문에 유용한데,
 자가 참조만으로는 그런 유용성을 보장할 수 없다.
 
-더 나아가서, Shriram Krishnamurthi는 〈[재귀를 가르치지 않는 방법](https://parentheticallyspeaking.org/articles/how-not-to-teach-recursion/)〉이라는 글에서 재귀를 가르치는 데 흔히 쓰는 예시들이 엉터리라는 것을 지적한다.
+더 나아가서, 슈리람 크리스나무르티(Shriram Krishnamurthi)는 〈[재귀를 가르치지 않는 방법](https://parentheticallyspeaking.org/articles/how-not-to-teach-recursion/)〉이라는 글에서 재귀를 가르치는 데 흔히 쓰는 예시들이 엉터리라는 것을 지적한다.
 그는 유용한 재귀를 크게 문제 자체가 ([트리](data-structure/tree)와 같이) 자연스럽게 재귀적으로 기술되는 경우와,
 그렇지 않은 경우(generative recursion) 둘로 나눌 수 있다는 걸 지적하며,
 전자에 해당하는 귀납적인 구조를 먼저 가르치고 후자를 나중에 가르쳐야 한다고 지적한다.

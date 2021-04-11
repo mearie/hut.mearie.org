@@ -11,6 +11,8 @@ changes:
   - “소숫점이 없는 정수에 범위 제한이 있는가?” 항목이 왜 문제가 되는지 구체적으로 부연.
   - 2021-03-20
   - 여는 예제를 추가함.
+  - 2021-04-11
+  - 인명을 한글 발음으로 대체.
 ---
 
 [JSON](https://en.wikipedia.org/wiki/JSON)은 [자바스크립트](javascript)의 (거의) 부분집합으로 시작해서 현재는 언어 불문하고 아주 널리 쓰이는 [직렬화](serialization) 포맷이다.
@@ -41,7 +43,7 @@ JSON에서 가능한 모든 종류의 값([NULL](), [불린형](boolean), 정수
 {{<claim>}}
 **JSON은 쓰레기다.**
 JSON은 대강 만들어진 표준이 얼마나 심각한 문제를 야기할 수 있는지 보여 주는 대표적인 예제이다.
-이걸 만든 사람은 [Douglas Crockford](https://en.wikipedia.org/wiki/Douglas_Crockford)라는 사람인데,
+이걸 만든 사람은 [더글라스 크록포드](https://en.wikipedia.org/wiki/Douglas_Crockford)(Douglas Crockford)라는 사람인데,
 당시 자바스크립트를 빡세게 사용하던 야후에서 근무한 덕분에 자바스크립트의 초기 발달에 상당한 영향을 미쳤다.
 허나 [그가 스스로 말하듯](https://www.crockford.com/about.html), 그는 표준화에 관심이 있다기보다는 자바스크립트를 유용한 언어로 만드는 데에 더 관심이 있었고,
 [“이 소프트웨어는 악을 행하는 용도로 쓸 수 없다”](https://en.wikipedia.org/wiki/Douglas_Crockford#%22Good,_not_Evil%22) 같은 드립이나 치면서 오픈 소스 소프트웨어 라이선싱을 꼬아 버리는 트롤링도 벌인 적이 있다.
@@ -174,7 +176,7 @@ This is true, but due to its origin I think we have a weak agreement over the JS
 
 ## 표준이 왜 이따위인가? {#bad-spec}
 
-본래 JSON은 Crockford의 [웹사이트](https://www.json.org/)에 대강 정의했던 것을 2006년에 [RFC 4627](https://tools.ietf.org/html/rfc4627)로 “표준화”한 것이 시초이다.
+본래 JSON은 크록포드의 [웹사이트](https://www.json.org/)에 대강 정의했던 것을 2006년에 [RFC 4627](https://tools.ietf.org/html/rfc4627)로 “표준화”한 것이 시초이다.
 이 표준은 놀랄 정도로 내용이 없는 걸로 유명한데,
 가장 강력한 문제는 JSON 파서가 JSON 텍스트(오브젝트나 배열)를 처리해서 내 놓는 출력에 대한 어떤 지침도 없다는 것이다.
 이를테면 이 RFC에 따르면 이론적으로 JSON 파서는 올바른 JSON을 인식**하기만 한 뒤** 항상 빈 오브젝트를 반환해도 무방하다.
@@ -182,7 +184,7 @@ This is true, but due to its origin I think we have a weak agreement over the JS
 그러나 지금껏 설명한 JSON의 모호한 구석에 대해 표준이 아무 부연도 하지 않는 건 상식을 벗어난다.
 
 JSON의 인기에 힘입어 2009년에 발표된 ECMAScript 5에는 [`JSON` 오브젝트](https://262.ecma-international.org/5.1/#sec-15.12)가 추가되었다.
-이 API는 Crockford의 [JSON2.js](https://github.com/douglascrockford/JSON-js) 라이브러리에 기반한 것으로,
+이 API는 크록포드의 [JSON2.js](https://github.com/douglascrockford/JSON-js) 라이브러리에 기반한 것으로,
 원래는 문법 정의를 RFC 4627에 맡기고 있었으나 [2008-11-03 초안을 기점으로](https://web.archive.org/web/20081216161234/http://wiki.ecmascript.org:80/doku.php?id=es3.1:es3.1_proposal_working_draft) ECMAScript 표준에도 JSON 문법이 추가되었다.
 RFC와 비교하면 이 표준은 상당한 발전이 있었지만, 동시에 JSON에 내재된 문제가 표면화된 첫 표준이기도 하다.
 
@@ -214,11 +216,11 @@ RFC와 비교하면 이 표준은 상당한 발전이 있었지만, 동시에 JS
 이러한 이유로 **한동안 JSON의 정의는 두 개가 있었다.**
 이후 2013년에 발표된 [ECMA-404](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)는 순전히 RFC 4627을 ECMAScript 명세를 반영하도록 살짝 고친 것에 불과했다.
 이런 꼬라지다 보니 RFC의 갱신이 필요했는데,
-[Crockford가 표준화 과정에서 나가 떨어져 나간 뒤에 Tim Bray가 그 자리를 이어 받아](https://www.tbray.org/ongoing/When/201x/2014/03/05/RFC7159-JSON),
+[크록포드가 표준화 과정에서 나가 떨어져 나간 뒤에 팀 브레이(Tim Bray)가 그 자리를 이어 받아](https://www.tbray.org/ongoing/When/201x/2014/03/05/RFC7159-JSON),
 2014년에 갱신된 [RFC 7159](https://tools.ietf.org/html/rfc7159)가 발표되기에 이른다.
 2021년 현재의 최신판 [RFC 8259](https://tools.ietf.org/html/rfc8259)은 몇 가지 사소한 수정을 빼고는 7159와 같다.
 
-RFC 7159는 Crockford의 RFC보다는 상태가 많이 낫지만 여전히 이런 저런 문제가 남아 있다.
+RFC 7159는 크록포드의 RFC보다는 상태가 많이 낫지만 여전히 이런 저런 문제가 남아 있다.
 
 * 상호 운용성 문제가 있는 JSON을 금지하는 대신에 쓰지 말라고 권고하는 수준에 그친다.
   대신 JSON의 부분집합으로서 [I-JSON](https://tools.ietf.org/html/rfc7493)을 새로 정의하여 이것을 쓰도록 하였는데,
