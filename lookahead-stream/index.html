@@ -10,7 +10,7 @@
 일반적으로는 특정 인터페이스를 쓴다고 구현이 불가능해지는 경우는 없지만,
 이 인터페이스가 구현 편의에 직접 영향을 미치기 때문에 허투루 고를 수도 없다.</p><h2 id=peek><code>peek</code> <a class=link-to-here href=#peek title="이 제목으로 링크하기">#</a></h2><p>이 인터페이스에서는 다음 연산을 지원한다.</p><ul><li><p><code>next := read()</code>는 입력을 하나 읽어들여 반환한다.</p></li><li><p><code>next := peek(n)</code>은 다음 n번째 <code>read()</code>가 반환할 값을 반환한다(1 ≤ n ≤ k).
 n = 1일 때가 흔하므로 이 경우에는 보통 n을 생략한다.
-물론 몇 번이든 호출해도 <code>read()</code>의 반환값은 바뀌지 않는다.</p></li></ul><p>이 접근은 <code>read()</code>의 동작을 바꾸지 않기 때문에 기존의 스트림 인터페이스를 크게 바꾸지 않고,
+물론 <code>peek()</code>을 몇 번이든 호출해도 다음 <code>read()</code>의 반환값은 바뀌지 않는다.</p></li></ul><p>이 접근은 <code>read()</code>의 동작을 바꾸지 않기 때문에 기존의 스트림 인터페이스를 크게 바꾸지 않고,
 실수할 여지도 별로 없으므로 일반적인 자료 구조에서 선호된다.
 하지만 파서에서는 <code>peek()</code>했던 값을 곧바로 <code>read()</code>하는 경우가 아주 흔하기 때문에 대단히 귀찮다.</p><h6>주요 사례</h6><p><a class=dead href=/not-found/#%2flookahead-stream%2f:rust>Rust</a> <a href=https://doc.rust-lang.org/std/iter/struct.Peekable.html><code>std::iter::Peekable</code></a> 등.</p><h2 id=unread-without-argument>인자 없는 <code>unread</code> <a class=link-to-here href=#unread-without-argument title="이 제목으로 링크하기">#</a></h2><p>이 인터페이스에서는 다음 연산을 지원한다.</p><ul><li><p><code>next := read()</code>는 입력을 하나 읽어들여 반환한다.</p></li><li><p><code>unread()</code>는 입력 위치를 앞으로 하나 당긴다.
 단 가장 많이 읽은 입력으로부터 앞으로 k개까지만 당길 수 있다.</p></li></ul><p><code>unread()</code>의 k개 제한은 다소 이해하기 어려울 수 있는데,
